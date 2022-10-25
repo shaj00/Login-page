@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./project1.css">
+</head>
+<body>
+    <div style="width: 100%; height: 70px;">
+        <div class="left" style="width: 50%; height: 50px; float:left;">
+ 
+    <p>
+<img src="./photo-1624807136278-e2973be118ff.jpg" alt="Mountain" height="100%" width="50%">
+</p>
+        </div>
+            <div class="right" style="width: 50%; height:500px ; float: left; background-color: white;">
+            <form style="padding-left: 200px;" name="myForm" action="process.html" method="get" onsubmit="return validate()">
+            <p style="color: grey; padding-top: 150px;">Welcome back</p>
+
+    <h2 style="font-family: sans-serif;"><b>Login to your account</b></h2>
+    <br>
+    <br>
+    <label for="uname">Email</label>
+    <br>
+    <input type="email" name="John.snow@gmail.com" id="email" placeholder="John.snow@gmail.com" style="height: 30px; width: 300px;">
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="password" id="password" placeholder="*********" style="height: 30px; width: 300px;">
+            <br>
+            <br>
+            <input type="radio" value="remember me"><label>Remember me</label> &nbsp; &nbsp; &nbsp; &nbsp;
+            <label style=" color:blue">Forgot password?</label>
+                <br>
+                <br>
+                <input type="submit" value="Login now">
+                <br>
+                        
+                        
+                        <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" value="Or-sign in with google">
+                        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="">&nbsp; Or-sign in with google</a>
+                        <br>
+                        <span id="invalid" style="text-align: center;"></span>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <h3 id="hrlogin"></h3>
+                        <p class="message">Do you have an account?
+                            <a href="#" type="link">Join free today</a>
+                        </p>
+                        
+</form>
+</div>
+</div>
+
+ <script>
+    function validate(){
+        var a=document.myForm.email.value;
+        var b=document.myForm.password.value;
+        if(a.indexOf('@')<=0){
+            document.getElementById("invalid").innerHTML="****INVALID EMAIL****";
+            document.getElementById("invalid").style.color="red";
+            return false;
+        }
+        if(a=='sankey901@solution.com' && b=='mindset'){
+            return true;
+        }
+        if(a!='sankey901@solution.com'){
+            document.getElementById("invalid").innerHTML="****INVALID EMAIL****";
+            document.getElementById("invalid").style.color="red";
+            return false;
+        }
+        if(a!='sankey901@solution.com' && b!='mindset'){
+            document.getElementById("invalid").innerHTML="****INVALID EMAIL OR PASSWORD****";
+            document.getElementById("invalid").style.color="red";
+            return false;
+    }
+        if(b=='mindset'){
+            return true;
+        }
+        if(b!='mindset'){
+            document.getElementById("invalid").innerHTML="****INVALID PASSWORD****";
+            document.getElementById("invalid").style.color="red";
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
